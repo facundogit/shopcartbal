@@ -31,8 +31,8 @@ return [
 
     'stripe' => [
         'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+        'key' => 'pk_test_w31BE9giYRrcTHMuqNPLkggP00uqCE0s2H',
+        'secret' => 'sk_test_oPScokVLTn4UzWIqaob4ZsYi00dixNu5DH',
     ],
 
     'braintree' => [
