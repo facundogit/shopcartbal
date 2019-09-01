@@ -11,8 +11,9 @@
     @component('components.breadcrumbs')
         <a href="/">Inicio</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Search</span>
+        <span>Busqueda</span>
     @endcomponent
+   
 
     <div class="container">
         @if (session()->has('success_message'))
@@ -50,9 +51,9 @@
                 @foreach ($products as $product)
                     <tr>
                         <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
-                        <td>{{ $product->details }}</td>
-                        <td>{{ str_limit($product->description, 80) }}</td>
-                        <td>{{ $product->presentPrice() }}</td>
+                        <td> {{ $product->details}}</div> </td>
+                        <td> {{ $product->description}}</div> </td>
+                        <td> {{ $product->presentPrice()}}</td>                                              
                     </tr>
                 @endforeach
             </tbody>
