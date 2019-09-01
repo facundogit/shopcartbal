@@ -1,7 +1,12 @@
 <ul>
+
     @guest
     <li><a href="{{ route('register') }}">Registrarse</a></li>
     <li><a href="{{ route('login') }}">Inicio</a></li>
+    @if ($agent->isMobile())
+        <li><a href="{{ route('mobile') }}">Descargar APP</a></li>
+    @endif
+    
     @else
     <li>
         <a href="{{ route('users.edit') }}">Mi Cuenta</a>
@@ -17,11 +22,23 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
     </form>
-    @endguest
-    <li><a href="{{ route('cart.index') }}">Carrito
-    @if (Cart::instance('default')->count() > 0)
-    <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+    @if ($agent->isMobile())
+        <li><a href="{{ route('cart.index') }}">Carrito
+        @if (Cart::instance('default')->count() > 0)
+            <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+        @endif
     @endif
+    @endguest
+
+    @if ($agent->isDesktop())
+        <li><a href="{{ route('cart.index') }}">Carrito
+        @if (Cart::instance('default')->count() > 0)
+            <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+        @endif
+    @endif
+
+    
+   
     </a></li>
     {{-- @foreach($items as $menu_item)
         <li>

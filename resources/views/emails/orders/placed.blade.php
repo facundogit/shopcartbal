@@ -21,7 +21,7 @@ Cantidad: {{ $product->pivot->quantity }} <br>
 
 Puede obtener mas detalles sobre su pedido en nuestra web.
 
-@component('mail::button', ['url' => config('app.url'), 'color' => 'green'])
+@component('mail::button', ['url' => 'http://shopcartbal.herokuapp.com', 'color' => 'green'])
 Valla al Sitio
 @endcomponent
 

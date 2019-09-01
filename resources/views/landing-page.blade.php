@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
     </head>
+   
     <body>
         <div id="app">
             <header class="with-background">
@@ -30,16 +31,17 @@
                 </div> <!-- end top-nav -->
                 <div class="hero container">
                     <div class="hero-copy" style="color: white">
-                        <p>Shop-Cart es un trabajo realizado para la Practica Supervisada de Balbuena Facundo</p> 
-                        <p>Es una aplicación web que contiene multiples productos, categorias y un carro de compras</p>                 
+                        <p>Shop-Cart es una tienda Online que contiene productos de electronica.</p> 
+                        <p>Esta App fue realizada por Balbuena Facundo </p>                 
                         <div class="hero-buttons">
                             
                         </div>
                     </div> <!-- end hero-copy -->
-
-                    <div class="hero-image">
-                        <img src="img/utn.jpg" alt="hero image">
-                    </div> <!-- end hero-image -->
+                    @if ($agent->isDesktop())
+                        <div class="hero-image">
+                            <img src="img/utn.jpg" alt="hero image">
+                        </div> <!-- end hero-image -->
+                    @endIf
                 </div>
             </header>   
                                   
@@ -83,4 +85,6 @@
         </div> <!-- end #app -->
         <script src="js/app.js"></script>
     </body>
+
+    
 </html>

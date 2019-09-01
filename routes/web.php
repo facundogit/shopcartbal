@@ -26,6 +26,8 @@ Route::get('/guestCheckout', 'CheckoutController@index')->name('guestCheckout.in
 
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
 
+Route::get('/mobile', 'MobileController@index')->name('mobile');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
