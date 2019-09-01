@@ -11,11 +11,11 @@
 @section('content')
 
    <div class="thank-you-section">
-       <h1>TEST</h1>
-       <p>TEST</p>
+       <h1>Descarga la APP de Shop-Cart</h1>
+       <p>Haz click en el boton Descargar</p>
        <div class="spacer"></div>
        <div>
-           <a href="{{ url('/') }}" class="button">Pagina de Inicio</a>
+           <a href="{{ url('/') }}" class="button">Descargar</a>
        </div>
    </div>
 

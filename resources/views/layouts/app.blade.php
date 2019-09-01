@@ -43,10 +43,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Inicio</a></li>
+                            <li><a href="{{ route('login') }}">Inicio</a></li>                                                       
                             <li><a href="{{ route('register') }}">Registro</a></li>
                             @if ($agent->isMobile())
-                                <li><a href="{{ route('mobile') }}">Descargar APP</a></li>
+                                <li><a href="{{ route('mobile') }}">Descargas</a></li>
                             @endif
                         @else
                             <li class="dropdown">
