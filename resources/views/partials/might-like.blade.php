@@ -1,6 +1,6 @@
 <div class="might-like-section">
     <div class="container">
-        @if ($agent->isMobile())
+        @if ($agent->isDesktop())
         <h2>Tambien te puede interesar</h2>
         <div class="might-like-grid">
             @foreach ($mightAlsoLike as $product)
