@@ -37,11 +37,12 @@
     <div class="product-section container">
         <div>
             <div class="product-section-image">
-                <img src="{{ productImage($product->image) }}" alt="product" class="active" id="currentImage">
+                <img src="{{ asset('storage/'.$product->image) }}" alt="product" class="active" id="currentImage">
+                <!-- <img src="{{ productImage($product->image) }}" alt="product" class="active" id="currentImage"> -->
             </div>
             <div class="product-section-images">
                 <div class="product-section-thumbnail selected">
-                    <img src="{{ productImage($product->image) }}" alt="product">
+                    <img src="{{ asset('storage/'.$product->image) }}" alt="product">
                 </div>
 
                 @if ($product->images)
