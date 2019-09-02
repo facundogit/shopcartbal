@@ -15,7 +15,7 @@
        <p>Haz click en el boton Descargar</p>
        <div class="spacer"></div>
        <div>
-           <a href="{{ url('/') }}" class="button">Descargar</a>
+           <a href="http://mobincube.mobi/5KZEVH" class="button">Descargar</a>
        </div>
    </div>
 

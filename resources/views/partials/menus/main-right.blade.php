@@ -32,6 +32,7 @@
 
     @if ($agent->isDesktop())
         <li><a href="{{ route('cart.index') }}">Carrito
+        <li><a href="{{ route('mobile') }}">Descargas</a></li>    
         @if (Cart::instance('default')->count() > 0)
             <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
         @endif
