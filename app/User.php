@@ -31,4 +31,9 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany('App\Order');
     }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'auth_by')->latest();
+    }
 }

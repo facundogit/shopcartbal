@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'public'),
+    'default' => 'local',
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
             'visibility' => 'public',
         ],
 
-        's3' => [
+         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),
             'secret' => env('AWS_SECRET'),

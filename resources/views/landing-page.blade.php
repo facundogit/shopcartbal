@@ -38,11 +38,13 @@
                         </div>
                     </div> <!-- end hero-copy -->
                     @if ($agent->isDesktop())
-                        <div class="hero-image">
+                        <div class="hero-image">                            
+                            <img src={{Storage::url("s3://shopcartbal/utn.jpg")}} />                   
+
                             <img src="img/utn.jpg" alt="hero image">
                         </div> <!-- end hero-image -->
                     @endIf
-                </div>
+                </div>                
             </header>   
                                   
                    
@@ -64,7 +66,7 @@
                     <div class="products text-center">
                         @foreach ($products as $product)
                             <div class="product">
-                                <a href="{{ route('shop.show', $product->slug) }}"><img src="{{asset('storage/'.$product->image)}}" alt="product"></a>
+                                <a href="{{ route('shop.show', $product->slug) }}"><img src="{{ productImage($product->image) }}" alt="product"></a>
                                 <a href="{{ route('shop.show', $product->slug) }}"><div class="product-name">{{ $product->name }}</div></a>
                                 <div class="product-price">{{ $product->presentPrice() }}</div>
                             </div>
