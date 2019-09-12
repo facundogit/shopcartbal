@@ -38,10 +38,8 @@
                         </div>
                     </div> <!-- end hero-copy -->
                     @if ($agent->isDesktop())
-                        <div class="hero-image">                            
-                            <img src={{Storage::url("s3://shopcartbal/utn.jpg")}} />                   
-
-                            <img src="img/utn.jpg" alt="hero image">
+                        <div class="hero-image">
+                          <img src="img/utn.jpg" alt="hero image">
                         </div> <!-- end hero-image -->
                     @endIf
                 </div>                
